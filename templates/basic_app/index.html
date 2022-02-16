@@ -1,0 +1,16 @@
+{% extends "basic_app/base.html" %}
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1> Ini adalah Halaman Index Geissss </h1>
+    
+    {% if user.is_authenticated %}
+    <h1>Selamat datang</h1>
+        <h2>Hello {{ user.username }}</h2><br>
+    {% else %}
+    <h1>Selamat datang !</h1>
+        <h2>Silahkan Login atau Register.</h2>
+    {% endif %}
+</div>
+
+{% endblock %}
